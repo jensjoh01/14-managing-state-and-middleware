@@ -13,7 +13,8 @@ var app = app || {};
 
   const render = Handlebars.compile($('#repo-template').text());
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COMMENT DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is appending repos as list items to an unordered list.  It is basically rendering our repos to the dom.  This function is being called by request repos, which is being called in the about controller, which is invoked by page JS when the user navigates to /about in the URL.  It calls a ui() function which configures the ui and prepairs it for our repo view.  That funciton is locally scoped inside of this IFFE.
   repoView.index = function() {
     ui();
 
