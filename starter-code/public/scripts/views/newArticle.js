@@ -4,7 +4,8 @@ var app = app || {};
 (function(module) {
   const newArticle = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COMMENT DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is initializing the new article page.  It hides irrelevent content and shows relevent content then invokes a few event listeners.  This function is called when new.html is loaded, because it is attached as a script file to that page and lives in a self invoking function which invokes this function.  So, when new.html is opened it runs this function to initialize the new article page.  This funciton calls a few event listeners which live on this JS page, newArticle.
   newArticle.initNewArticlePage = function() {
     $('.tab-content').show();
     $('#export-field').hide();

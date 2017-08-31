@@ -12,5 +12,6 @@ page('/author', '/');
 page('/author/:authorName', app.articleController.loadByAuthor, app.articleController.index);
 page('/category/:categoryName', app.articleController.loadByCategory, app.articleController.index);
 
-// COMMENT: What is this function doing?
+// COMMENT DONE: What is this function doing?
+// This function is initializing page.js so that it is actively listening to a URL change.
 page();

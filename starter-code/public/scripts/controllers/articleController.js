@@ -4,8 +4,8 @@ var app = app || {};
 (function(module) {
   const articleController = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
-  // (put your response in a comment here)
+  // COMMENT DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is sending the articles which are specified by the URL by page.js to artivleView.index which loads the articles specified by the URL to the dom.  This function is being called when it is invoked by page.js when a route is specified.  It calls articleView.index, which takes the ctx.articles as an input and uses it to render the articles that have the ctx that is specified by the URL.  articleView.index lives in articleView.js.
   articleController.index = (ctx) => app.articleView.index(ctx.articles);
 
   // REVIEW: Middleware for grabbing one article by ID:
@@ -15,8 +15,8 @@ var app = app || {};
       next();
     };
 
-    // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
-    // (put your response in a comment here)
+    // COMMENT DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+    // This function is called right below in this file, articleController.  It is a function that lives in article.js.  It takes in parameters that is uses for an ajax request. Then invokes the callback function which is the third input.  In this case the callback is articleData which lives in this file.
     app.Article.findWhere('article_id', ctx.params.article_id, articleData);
   };
 

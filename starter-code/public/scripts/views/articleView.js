@@ -4,7 +4,8 @@ var app = app || {};
 (function(module) {
   const articleView = {};
 
-  // COMMENT: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // COMMENT DONE: What is this function doing? Where is it called? Does it call any other functions, and if so, in what file(s) do those function(s) live?
+  // This function is built to accept an article object as an input and output a handlebars template populated with the article object's properties.  It is being called in this JS file, articleView, where it will run for eash article object.  It calls a .compile function which is a built in function in the handlebars library.  And parseInt which is built into native JS.
   const render = function(article) {
     let template = Handlebars.compile($('#article-template').text());
 
